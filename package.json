@@ -1,0 +1,34 @@
+{
+  "name": "Crud-Bday",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NASP-tech/Crud-Bday.git"
+  },
+  "keywords": [],
+  "author": "natsol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NASP-tech/Crud-Bday/issues"
+  },
+  "homepage": "https://github.com/NASP-tech/Crud-Bday#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.1",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.0.13",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "nodemon": "^2.0.15"
+  }
+}
