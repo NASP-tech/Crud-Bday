@@ -1,1 +1,6 @@
-<h1>Editando</h1>
+<form action="/edit/{{task._id}}" method="POST">
+    <input type="text" name="title" placeholder="Name" value="{{task.title}}" />
+    <textarea name="description" rows="2" placeholder="Birthday month/day/year" >{{task.description}}</textarea>
+    <textarea name="ideas" rows="3" placeholder="Birthday Ideas" >{{task.ideas}}</textarea>
+    <button>Update</button>
+</form>

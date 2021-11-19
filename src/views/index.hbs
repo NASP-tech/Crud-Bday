@@ -1,19 +1,2 @@
-<form action="/tasks/add" method="POST">
-
-    <div>
-        <label for="title">Write a Person's Name</label>
-        <input type="text" name="title" placeholder="Name" />
-    </div>
-    
-    <div>
-        <label for="description">Birthday:</label>
-        <textarea name="description" placeholder="Birthday month/day/year"></textarea>
-    </div>
-
-    <div>
-        <label for="ideas">Ideas:</label>
-        <textarea name="ideas" placeholder="Birthday ideas"></textarea>
-    </div>
-
-    <button>Add</button>
-</form>
+{{> bdays/bdayForm}}
+{{> bdays/bdayTable}}
