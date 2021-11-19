@@ -1,8 +1,19 @@
-<h1>Hello World</h1>
+<form action="/tasks/add" method="POST">
 
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing 
-    elit. Minus, pariatur totam accusantium iusto 
-    suscipit vitae nihil architecto inventore tempore 
-    quibusdam! Nat
-</p>
+    <div>
+        <label for="title">Write a Person's Name</label>
+        <input type="text" name="title" placeholder="Name" />
+    </div>
+    
+    <div>
+        <label for="description">Birthday:</label>
+        <textarea name="description" placeholder="Birthday month/day/year"></textarea>
+    </div>
+
+    <div>
+        <label for="ideas">Ideas:</label>
+        <textarea name="ideas" placeholder="Birthday ideas"></textarea>
+    </div>
+
+    <button>Add</button>
+</form>
