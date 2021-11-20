@@ -19,3 +19,4 @@
 * npm run dev 
 * npm run build - para produccion
 * node dist/index.js
+* Ver en el navegador
