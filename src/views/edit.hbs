@@ -1,14 +1,37 @@
-<form action="/bdays/{{task._id}}/edit" method="POST">
-    <input type="text" name="title" placeholder="Name" value="{{task.title}}" />
-    <textarea
-        name="description"
-        rows="2"
-        placeholder="Birthday month/day/year"
-    >{{task.description}}</textarea>
-    <textarea
-        name="ideas"
-        rows="3"
-        placeholder="Birthday Ideas"
-    >{{task.ideas}}</textarea>
-    <button>Update</button>
-</form>
+<div class="container">
+    <div class="row">
+    <div class="col-md-5 offset-md-3">
+        <div class="card card-body bg-dark p-4 text-white rounded">
+            <h2>Update a Birthday</h2>
+            <form action="/bdays/{{task._id}}/edit" method="POST">
+                <div class="mb-2">
+                    <input
+                        type="text"
+                        name="title"
+                        placeholder="Name"
+                        value="{{task.title}}"
+                        class="form-control rounded bg-dark text-white"
+                    />
+                </div>
+                <div class="mb-2">
+                    <textarea
+                        name="description"
+                        rows="2"
+                        placeholder="Birthday month/day/year"
+                        class="form-control rounded bg-dark text-white"
+                    >{{task.description}}</textarea>
+                </div>
+                <div class="mb-2">
+                    <textarea
+                        name="ideas"
+                        rows="3"
+                        placeholder="Birthday Ideas"
+                        class="form-control rounded bg-dark text-white"
+                    >{{task.ideas}}</textarea>
+                </div>
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>

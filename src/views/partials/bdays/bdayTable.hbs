@@ -1,4 +1,5 @@
-<table>
+{{#if tasks}}
+<table class="table table-bordered table-hover table-dark">
     <thead>
         <tr>
             <th>N.</th>
@@ -11,21 +12,32 @@
 
     <tbody>
         {{#each tasks}}
-            <tr>
-                <td>{{@index}}</td>
-                <td>{{title}}</td>
-                <td>{{description}}</td>
-                <td>{{ideas}}</td>
-                <td>
-                    {{#if done}}
-                        <a href="/bdays/{{_id}}/toggleDone">Undone</a>
-                    {{else}}
-                        <a href="/bdays/{{_id}}/toggleDone">Done</a>
-                    {{/if}}
-                    <a href="/bdays/{{_id}}/delete">Delete</a>
-                    <a href="/bdays/{{_id}}/edit">Update</a>
-                </td>
-            </tr>
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>{{ideas}}</td>
+            <td>
+                {{#if done}}
+                <a href="/bdays/{{_id}}/toggleDone" class="btn btn-dark">Undone</a>
+                {{else}}
+                <a href="/bdays/{{_id}}/toggleDone" class="btn btn-success">Done</a>
+                {{/if}}
+                <a href="/bdays/{{_id}}/delete" class="btn btn-danger">Delete</a>
+                <a href="/bdays/{{_id}}/edit" class="btn btn-info">Update</a>
+            </td>
+        </tr>
+
+
+
         {{/each}}
     </tbody>
 </table>
+
+{{else}}
+<div class="text-center">
+    <h1>No Birthdays Added</h1>
+    <img src="" alt="">
+</div>
+
+{{/if}}

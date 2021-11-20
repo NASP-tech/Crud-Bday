@@ -1,19 +1,25 @@
-<form action="/tasks/add" method="POST">
+<div class="card card-body p-4 rounded bg-dark text-white">
+    <h3>Add Your People's Bithday</h3>
+    <form action="/tasks/add" method="POST">
 
-    <div>
-        <label for="title">Write a Person's Name</label>
-        <input type="text" name="title" placeholder="Name" />
-    </div>
-    
-    <div>
-        <label for="description">Birthday:</label>
-        <textarea name="description" placeholder="Birthday month/day/year"></textarea>
-    </div>
+        <div>
+            <label for="title">Write a Person's Name</label>
+            <input type="text" name="title" placeholder="Name" id="title"
+                class="form-control rounded bg-dark text-white" />
+        </div>
 
-    <div>
-        <label for="ideas">Ideas:</label>
-        <textarea name="ideas" placeholder="Birthday Ideas"></textarea>
-    </div>
+        <div>
+            <label for="description">Birthday:</label>
+            <textarea name="description" placeholder="Birthday month/day/year" id="description"
+                class="form-control rounded bg-dark text-white"></textarea>
+        </div>
 
-    <button>Add</button>
-</form>
+        <div>
+            <label for="ideas">Ideas:</label>
+            <textarea name="ideas" placeholder="Birthday Ideas" id="ideas"
+                class="form-control rounded bg-dark text-white"></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-sm mt-2">Add</button>
+    </form>
+</div>
