@@ -1,2 +1,4 @@
 # Ignorar carpeta de node modules
 node_modules
+
+.dist

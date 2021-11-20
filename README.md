@@ -12,3 +12,10 @@
 
 ### 02-2021
 # Crud-Bday
+
+### Para correr la app
+* npm i 
+* Ingresar/Cambiar la url de mongoDB
+* npm run dev 
+* npm run build - para produccion
+* node dist/index.js
