@@ -1,54 +1,27 @@
-import { Router } from 'express';
-import Bday from '../models/Bday';
+import { Router } from "express";
+
+import {
+    renderTasks,
+    createTask,
+    renderBdayEdit,
+    editBday,
+    deleteBday,
+    bdayToggleDone,
+} from "../controllers/bdays.controller";
 
 const router = Router();
 
-router.get("/", async (req, res) => {
-    const bdays = await Bday.find().lean();
+router.get("/", renderTasks);
+router.post("/tasks/add", createTask);
 
-    res.render('index.hbs', { tasks: bdays });
-});
-router.post('/tasks/add', async (req, res) => {
-    try {
-        const task = Bday(req.body);
-        await task.save();
-        res.redirect('/');
-    } catch (error) {
-        console.log(error);
-    }
-});
+router.get("/bdays/:id/toggleDone", bdayToggleDone);
 
-router.get("/about", (req, res) => {
-    res.render('about.hbs');
-});
+router.get("/bdays/:id/edit", renderBdayEdit);
 
-router.get("/edit/:id", async (req, res) => {
-    try {
-        const task = await Bday.findById(req.params.id).lean();
-        res.render('edit.hbs', {task});
-    } catch (error) {
-        console.log(error.message);
-    }
-});
+router.post("/bdays/:id/edit", editBday);
 
-router.post('/edit/:id', async(req, res) => {
-    const {id} = req.params;
-    await Bday.findByIdAndUpdate(id, req.body);
-    res.redirect("/");
-});
+router.get("/bdays/:id/delete", deleteBday);
 
-router.get('/delete/:id', async(req, res) => {
-    const {id} = req.params;
-    await Bday.findByIdAndDelete(id);
-    res.redirect("/");
-});
 
-router.get('/toggleDone/:id', async(req, res) => {
-    const {id} = req.params;
-    const task = await Bday.findById(id);
-    task.done = !task.done;
-    await task.save();
-    res.redirect('/');
-})
 
 export default router;
